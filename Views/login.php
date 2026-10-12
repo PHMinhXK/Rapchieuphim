@@ -1,9 +1,8 @@
 <?php
 
-require_once "../LoginController.php";
+require_once __DIR__ . "/../Controllers/LoginController.php";
 
 $controller = new LoginController();
-
 $controller->DangNhap();
 
 ?>

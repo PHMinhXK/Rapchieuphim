@@ -63,7 +63,7 @@ $data = $stm->fetchAll();
             Xem Dashboard
         </a>
 
-        <a href="/Kiemtra3/logout.php" class="btn btn-danger">
+        <a href="/Kiemtra3/Views/logout.php" class="btn btn-danger">
             Đăng xuất
         </a>
 

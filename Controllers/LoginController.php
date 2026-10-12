@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once "UserModel.php";
+require_once __DIR__ . "/../Models/UserModel.php";
 
 class LoginController
 {
@@ -15,7 +15,7 @@ class LoginController
 
             $model = new UserModel();
 
-            $user = $model->DangNhap($username,$password);
+            $user = $model->DangNhap($username, $password);
 
             if($user)
             {
@@ -33,8 +33,9 @@ class LoginController
     {
         session_destroy();
 
-        header("Location: ../Views/login.php");
+        header("Location: /Kiemtra3/Views/login.php");
         exit();
     }
 }
+
 ?>

@@ -1,15 +1,17 @@
 <?php
+
 session_start();
 
 if(!isset($_SESSION["user"]))
 {
-    header("Location: /Kiemtra3/Views/login.php");
+    header("Location: /Kiemtra/Views/login.php");
     exit();
 }
 
-require_once "database.php";
+require_once __DIR__ . "/../Models/Database.php";
 
 $tongphim = $pdo->query("SELECT COUNT(*) FROM bangchieu")->fetchColumn();
+
 ?>
 
 <!DOCTYPE html>
@@ -36,8 +38,8 @@ $tongphim = $pdo->query("SELECT COUNT(*) FROM bangchieu")->fetchColumn();
         Quản lý phim
     </a>
 
-    <a href="/Kiemtra3/logout.php" class="btn btn-danger">
-        Đăng xuất
+    <a href="/Kiemtra3/Views/logout.php" class="btn btn-danger">
+    Đăng xuất
     </a>
 
 </div>

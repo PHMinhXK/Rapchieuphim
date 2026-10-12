@@ -1,6 +1,6 @@
 <?php
 
-require_once "Database.php";
+require_once __DIR__ . "/Database.php";
 
 class UserModel
 {
@@ -8,7 +8,6 @@ class UserModel
 
     public function __construct()
     {
-        require_once "Database.php";
         global $pdo;
         $this->pdo = $pdo;
     }
@@ -29,4 +28,5 @@ class UserModel
         return $stm->fetch(PDO::FETCH_ASSOC);
     }
 }
+
 ?>
